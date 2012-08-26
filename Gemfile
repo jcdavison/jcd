@@ -4,8 +4,6 @@ gem 'rails', '3.2.7'
 gem 'jquery-rails'
 gem 'pg', '~> 0.14.0'
 gem 'devise', '~> 2.1.2'
-gem 'thin'
-gem 'haml-rails', '>= 0.3.4', :group => :development
 gem "quiet_assets", "~> 1.0.1"
 
 group :test, :development do
@@ -19,5 +17,5 @@ group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
   gem 'uglifier', '>= 1.0.3'
-  gem 'bourbon'
+
 end

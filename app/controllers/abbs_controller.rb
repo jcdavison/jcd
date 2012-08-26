@@ -1,0 +1,2 @@
+class AbbsController < ApplicationController
+end

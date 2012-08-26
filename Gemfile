@@ -4,6 +4,9 @@ gem 'rails', '3.2.7'
 gem 'jquery-rails'
 gem 'pg', '~> 0.14.0'
 gem 'devise', '~> 2.1.2'
+gem 'thin'
+gem 'haml-rails', '>= 0.3.4', :group => :development
+gem "quiet_assets", "~> 1.0.1"
 
 group :test, :development do
   gem "rspec-rails", "~> 2.0"

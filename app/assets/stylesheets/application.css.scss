@@ -9,10 +9,12 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
- *= require_tree .
+
  */
+ @import "bourbon";
+ @import "abbs";
 
  body {
-   background-color: #33FF66 ;
+   background-color: #DBD9DA ;
    background-image: url(grey_brick.jpg) ;
  }

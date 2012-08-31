@@ -1,7 +1,11 @@
 =image_tag("jdavison.jpg", :id => "profile") 
-%section.content#nav
-  %p navbar
 %section.content#main
   %p Main Content
 %section.content#footer
-  %p footer
+  %h4.footer 
+    connect with me => 
+    =link_to("@jcdavison", "http://www.twitter.com/jcdavison", :target => "new")
+    |
+    =link_to("github.com/jcdavison", "https://www.github.com/jcdavison", :target => "new") 
+    |
+    =link_to("linkedin.com/in/jcdavison", "http://www.linkedin.com/in/jcdavison", :target => "new")

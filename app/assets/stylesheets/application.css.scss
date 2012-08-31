@@ -19,11 +19,13 @@
 	background-image: url(grey_brick.jpg) ;
 }
 
+
+
 #profile {
 	
 	position: fixed ;
-	top: 10% ;
-	left: 7% ;
+	top: 20% ;
+	left: 4% ;
 	@include border-radius(5px) ;
 	@include box-shadow(0 0 5px 3px hsla(263, 100%, 0%, 0.50));
 
@@ -52,11 +54,20 @@
 	left: 15% ;
 	width: 55% ;
 	height: 10% ;
-
 } 
   
 h1,h2,h3,h4,h5,ul,ol,li,p,header,section,footer {
 	font-family: Tahoma ;
+	color: B3B3B3 ;
+	.footer {
+	text-align: center
+	}
+}
+
+a:link, a:active, a:hover, a:visited {
+color: hsla(205, 100%, 45%, 0.70);
+text-decoration: none;
+
 }
 
 .content {

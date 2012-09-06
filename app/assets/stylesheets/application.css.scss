@@ -24,25 +24,22 @@ $blue_color: hsla(205, 100%, 45%, 0.70) ;
 #profile {
 	
 	position: fixed ;
-	top: 20% ;
-	left: 4% ;
+	top: 219px ;
+	left: 210px ;
 	@include border-radius(5px) ;
 	@include box-shadow(0 0 5px 3px hsla(263, 100%, 0%, 0.50));
 
 }
 
 #main {
-	position: fixed ;
-	top: 8% ;
-	left: 25% ;
-	width: 60% ;
-	height: 60% ;
-
+    position: fixed ;
+	top: 50px ;
+	left: 500px ;
 }
 
 #nav {
 	position: fixed ;
-	top: 38% ;
+	top: 110px ;
 	left: 6% ;
 	width: 15% ;
 	height: 30% ;
@@ -50,10 +47,10 @@ $blue_color: hsla(205, 100%, 45%, 0.70) ;
 
 #footer {
 	position: fixed ;
-	bottom: 16% ;
-	left: 15% ;
-	width: 55% ;
-	height: 10% ;
+    top: 480px ;
+	left: 240px ;
+    padding: 10px ;
+
 } 
   
 h1,h2,h3,h4,h5,ul,ol,li,p,header,section,footer {
@@ -61,7 +58,14 @@ h1,h2,h3,h4,h5,ul,ol,li,p,header,section,footer {
 	color: B3B3B3 ;
 	.footer {
 	text-align: center
+    
 	}
+    .main {
+    font-size: 22px ;
+    text-align: center ;
+    list-style-type: none ;
+    
+    }
 }
 
 a:link, a:active, a:hover, a:visited {
@@ -75,6 +79,6 @@ text-decoration: none;
 	background-color: #F5F5F5 ;	
 	opacity: .70 ; 
 	@include box-shadow(0 0 5px 3px hsla(205, 100%, 45%, 0.70));
-	padding: 2px ; 
+	padding: 20px ; 
 }
  

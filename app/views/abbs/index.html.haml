@@ -1,11 +1,5 @@
 =image_tag("jdavison.jpg", :id => "profile") 
-%section.content#main
-  %p Greetings.  I'm a fore hire rails developer.  I just finished dev bootcamp and have a ton of other interesting life experiences.  
-%section.content#footer
-  %h4.footer 
-    connect with me => 
-    =link_to("@jcdavison", "http://www.twitter.com/jcdavison", :target => "new")
-    |
-    =link_to("github.com/jcdavison", "https://www.github.com/jcdavison", :target => "new") 
-    |
-    =link_to("linkedin.com/in/jcdavison", "http://www.linkedin.com/in/jcdavison", :target => "new")
+= render 'layouts/therules'
+= render 'layouts/footer'  
+- if user_signed_in?
+  =link_to "log out", destroy_user_session_path, :method => "delete"

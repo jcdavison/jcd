@@ -1,3 +1,17 @@
-// Place all the styles related to the Articles controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+#blog {
+	@include border-radius(5px) ;
+	@include box-shadow(0 0 5px 3px $grey_color);
+    height: 125px ;
+    width: 125px ;
+}
+
+#blog_nav {
+    position: fixed ;
+    left: 100 px ;
+    top: 10 px ;
+    width: 200 px ;
+}
+
+.blog_main{
+
+}

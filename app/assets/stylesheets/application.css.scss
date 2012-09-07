@@ -9,63 +9,17 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
-
  */
+ 
  @import "bourbon";
+ @import "constants";
  @import "abbs";
+ @import "articles";
+
 
 body {
 	background-color: #DBD9DA ;
 	background-image: url(grey_brick.jpg) ;
-}
-
-$blue_color: hsla(205, 100%, 45%, 0.70) ;
-
-#profile {
-	
-	position: fixed ;
-	top: 219px ;
-	left: 210px ;
-	@include border-radius(5px) ;
-	@include box-shadow(0 0 5px 3px hsla(263, 100%, 0%, 0.50));
-
-}
-
-#main {
-    position: fixed ;
-	top: 50px ;
-	left: 500px ;
-}
-
-#nav {
-	position: fixed ;
-	top: 110px ;
-	left: 6% ;
-	width: 15% ;
-	height: 30% ;
-} 
-
-#footer {
-	position: fixed ;
-    top: 480px ;
-	left: 240px ;
-    padding: 10px ;
-
-} 
-  
-h1,h2,h3,h4,h5,ul,ol,li,p,header,section,footer {
-	font-family: Tahoma ;
-	color: B3B3B3 ;
-	.footer {
-	text-align: center
-    
-	}
-    .main {
-    font-size: 22px ;
-    text-align: center ;
-    list-style-type: none ;
-    
-    }
 }
 
 a:link, a:active, a:hover, a:visited {
@@ -73,12 +27,3 @@ color: $blue_color;
 text-decoration: none;
 
 }
-
-.content {
-	@include border-radius(10px) ;
-	background-color: #F5F5F5 ;	
-	opacity: .70 ; 
-	@include box-shadow(0 0 5px 3px hsla(205, 100%, 45%, 0.70));
-	padding: 20px ; 
-}
- 

@@ -1,4 +1,14 @@
-%section.blog_nav
-  =image_tag("jdavison.jpg", :id => "blog") 
-%section.blog_main
-  = @article.inspect
+%section#blog_nav
+  %section #{image_tag("jdavison.jpg", :id => "blog_profile")}
+  %section
+    %ul.nav
+      %li #{link_to("All Articles", articles_path)}
+      %li #{link_to("Home", root_path)}
+      %li #{link_to("@jcdavison", "http://www.twitter.com/jcdavison")}
+%section#blog_content
+  %section.article
+    %article.article.title #{@article.title}
+    %article.date  #{@article.created_at}
+    %article.stuff #{@article.content}
+
+   

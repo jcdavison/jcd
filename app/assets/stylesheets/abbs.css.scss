@@ -1,53 +1,62 @@
-@import "constants";
-
-h1,h2,h3,h4,h5,ul,ol,li,p,header,section,footer {
-	font-family: Tahoma ;
-	color: B3B3B3 ;
-	.footer {
-	text-align: center
-	}
-    .main {
-    font-size: 22px ;
-    text-align: center ;
-    list-style-type: none ;
-    }
+#main_pic {
+	position: fixed;
+	top: 217px;
+	left: 155px;
 }
 
-#nav {
-	position: fixed ;
-	top: 110px ;
-	left: 6% ;
-	width: 15% ;
-	height: 30% ;
-} 
-
-#profile {
-	position: fixed ;
-	top: 235px ;
-	left: 235px ;
-	@include border-radius(5px) ;
+img#jcdavison {
+	@include border-radius(10px) ;
 	@include box-shadow(0 0 5px 3px $grey_color);
 }
 
-#main {
-    position: fixed ;
-	top: 50px ;
-	left: 485px ;
+#main_display {
+    position: fixed;
+    background-color:$section_bg_color;
+    opacity: .65;
+    @include border-radius(10px) ;
+    @include box-shadow(0 0 5px 3px $blue_color);
+    margin: 15px;
+    width: 360px;
+    top: 40px;
+    left: 390px;
+    overflow: auto;
+}
+
+ul {
+	padding: 5px;
+	font-size: 22px ;
+	color: B3B3B3 ;
+    text-align: center ;
+    overflow: auto;
+    li.padded { 
+    padding: 10px;
+    }
 }
 
 #footer {
-	position: fixed ;
-    top: 480px ;
-	left: 240px ;
-    padding: 10px ;
+	position: fixed;
+	top: 458px;
+	left: 145px;
+	height: 50px;
+	background-color:$section_bg_color;
+    opacity: .65;
+    @include border-radius(10px) ;
+    @include box-shadow(0 0 5px 3px $blue_color);
 
-} 
-  
-.content {
-	@include border-radius(10px) ;
-	background-color: $bg_color ;	
-	opacity: .70 ; 
-	@include box-shadow(0 0 5px 3px $blue_color);
-	padding: 20px ; 
 }
- 
+
+#footer_content {
+	padding: 10px;
+	margin: 0px;
+	ul, li {
+	list-style-type: none;
+	display: inline;
+	padding: 5px;
+	font-weight: bold;
+	font-size: 16px ;
+	margin: 0px;
+	}
+
+}
+
+

@@ -1,17 +1,68 @@
-#blog {
+#blog_nav {
+    position: absolute ;
+    top: 25 px ;
+    width: 200 px ;
+    padding: 10px ;
+
+
+}
+
+#blog_profile {
+	position: relative; 
 	@include border-radius(5px) ;
 	@include box-shadow(0 0 5px 3px $grey_color);
     height: 125px ;
     width: 125px ;
+
 }
 
-#blog_nav {
-    position: fixed ;
-    left: 100 px ;
-    top: 10 px ;
-    width: 200 px ;
+.nav {
+    list-style-type: none ;
+    	@include border-radius(10px) ;
+	background-color: $section_bg_color ;	
+	opacity: .70 ; 
+    }
+
+li { 
+	padding: 3px ;
+	font-size: 20px ;
+	text-align: center;
 }
 
-.blog_main{
+
+
+#blog_content{
+	position: absolute ;
+	top: 50px ;
+	left: 250px ;
+	width: 600px ;
+	@include border-radius(10px) ;
+	background-color: $section_bg_color ;	
+	opacity: .70 ; 
+	@include box-shadow(0 0 5px 3px $blue_color);
+	padding: 5px ;
+	margin: 10px ;
+	overflow: auto ;
+}
+
+.article {
+	margin: 10px;
+
+	.title {
+	font-size: 22px ;
+	font-weight: bold ;
+    text-align: left ;
+	}
+
+	.date {
+	font-size: 12px ;
+    text-align: left ;
+	}
+
+	.stuff {
+	font-size: 16px ;
+    text-align: center ;
+    padding: 10px ;
+	}
 
 }

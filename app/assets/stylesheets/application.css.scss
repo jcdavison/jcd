@@ -12,18 +12,21 @@
  */
  
  @import "bourbon";
- @import "constants";
+
+$blue_color: hsla(205, 100%, 45%, 0.70) ;
+$grey_color: hsla(263, 100%, 0%, 0.50) ;
+$section_bg_color: #F5F5F5 ;
+
  @import "abbs";
- @import "articles";
-
-
+ 
 body {
 	background-color: #DBD9DA ;
 	background-image: url(grey_brick.jpg) ;
+	font-family: Tahoma ;
+	overflow: auto;
 }
 
 a:link, a:active, a:hover, a:visited {
 color: $blue_color;
 text-decoration: none;
-
 }

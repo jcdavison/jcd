@@ -1,5 +1,6 @@
-=image_tag("jdavison.jpg", :id => "profile") 
-= render 'layouts/therules'
-= render 'layouts/footer'  
-- if user_signed_in?
-  =link_to "log out", destroy_user_session_path, :method => "delete"
+%section#main_pic
+  =image_tag("jdavison.jpg", :id => "jcdavison")
+%section#main_display
+  = render 'layouts/therules'
+%section#footer
+  = render 'layouts/footer'

@@ -1,41 +1,48 @@
 #blog_nav {
-    position: absolute ;
-    top: 25 px ;
-    width: 200 px ;
-    padding: 10px ;
-
+	position:fixed;
 
 }
 
-#blog_profile {
-	position: relative; 
+#blog_pic {
+	position: fixed; 
 	@include border-radius(5px) ;
 	@include box-shadow(0 0 5px 3px $grey_color);
     height: 125px ;
     width: 125px ;
+    left: 55px ;
+    top: 15px;
 
 }
 
-.nav {
-    list-style-type: none ;
-    	@include border-radius(10px) ;
+.blog_container {
+	position: absolute ;
+    @include border-radius(10px) ;
+    @include box-shadow(0 0 5px 3px $grey_color);
 	background-color: $section_bg_color ;	
 	opacity: .70 ; 
-    }
+	width: 150px ;
+	padding: 5px;
+	top: 175px;
+	left: 30px ;
 
-li { 
-	padding: 3px ;
+	ul {
+	list-style-type: none ;
+
+	}
+	li { 
+	padding: 5px ;
 	font-size: 20px ;
 	text-align: center;
-}
+	}
 
 
+    }
 
 #blog_content{
 	position: absolute ;
 	top: 50px ;
 	left: 250px ;
-	width: 600px ;
+	width: 700px ;
 	@include border-radius(10px) ;
 	background-color: $section_bg_color ;	
 	opacity: .70 ; 
@@ -46,12 +53,13 @@ li {
 }
 
 .article {
-	margin: 10px;
-
+	
+	color: #636263 ;
 	.title {
 	font-size: 22px ;
 	font-weight: bold ;
     text-align: left ;
+
 	}
 
 	.date {
@@ -59,10 +67,20 @@ li {
     text-align: left ;
 	}
 
-	.stuff {
+	.content {
 	font-size: 16px ;
     text-align: center ;
     padding: 10px ;
 	}
 
 }
+
+#create_article {
+	overflow: visible;
+	position: absolute ;
+	top: 50px;
+	left: 250px;
+	text-align: center;
+
+}
+	

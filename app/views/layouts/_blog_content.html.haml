@@ -1,0 +1,10 @@
+%section#blog_content
+  %section.article
+    %p.title
+      =@article.title
+    %p.date
+      =@article.created_at.to_date
+    %p.content
+      = @article.content.html_safe
+      -if @article.ruby_code?
+        = CodeRay.scan(@article.ruby_code, :ruby).html(  :wrap => nil, :line_numbers => :inline, :css => :style, :wrap => :div, :break_lines => true).html_safe

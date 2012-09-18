@@ -13,12 +13,14 @@
  
  @import "bourbon";
 
+
 $blue_color: hsla(205, 100%, 45%, 0.70) ;
 $grey_color: hsla(263, 100%, 0%, 0.50) ;
 $section_bg_color: #F5F5F5 ;
 
- @import "abbs";
- 
+@import "abbs";
+@import "articles";
+
 body {
 	background-color: #DBD9DA ;
 	background-image: url(grey_brick.jpg) ;
@@ -29,4 +31,15 @@ body {
 a:link, a:active, a:hover, a:visited {
 color: $blue_color;
 text-decoration: none;
+}
+
+#admin_container {
+	position: fixed;
+		top: 350px ;
+	left: 25px ;
+
+	.admin_nav {
+
+	}
+	
 }

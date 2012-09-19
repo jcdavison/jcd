@@ -1,3 +1,4 @@
 = render 'layouts/blog_nav'
-= render 'layouts/admin_nav'
+if check_blog_editor_status == true
+  = render 'layouts/admin_nav'
 = render 'layouts/blog_content'

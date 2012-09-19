@@ -15,6 +15,7 @@ class ArticlesController < ApplicationController
     def create
         @article = Article.new(params[:article])
         @article.user_id = current_user.id
+        audit current_user.id
         @article.save
         redirect_to articles_path
     end

@@ -11,4 +11,12 @@ module ArticlesHelper
 		end
 		blog_copy
 	end
+
+	def check_blog_editor_status
+		if user_signed_in? && current_user.email == "johncdavison@gmail.com"
+			true
+		else
+			false
+		end
+	end
 end

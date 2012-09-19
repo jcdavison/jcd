@@ -1,5 +1,6 @@
 = render 'layouts/blog_nav'
-= render 'layouts/admin_nav'
+- if check_blog_editor_status == true 
+  = render 'layouts/admin_nav'
 %section#blog_content
   %section.article
     - @article.each do |article|

@@ -1,4 +1,4 @@
 %section#admin_container
   %ul.admin_nav
     %li #{link_to("new article", new_article_path)}
-    %li #{link_to("logout", destroy_user_session_path)}
+    %li #{link_to("logout", destroy_user_session_path, :method => "DELETE")}

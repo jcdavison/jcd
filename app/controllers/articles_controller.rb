@@ -18,10 +18,6 @@ class ArticlesController < ApplicationController
         @article.save
         redirect_to articles_path
     end
-
-    def coderay
-        @article = Article.last
-    end
     
     def edit
     end

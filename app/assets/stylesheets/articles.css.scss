@@ -53,7 +53,11 @@
 }
 
 .article {
-	
+	ul, li {
+	list-style-type: none;
+	display: inline;
+
+	}
 	color: #636263 ;
 	.title {
 	font-size: 22px ;
@@ -62,7 +66,7 @@
 
 	}
 
-	.date {
+	.date, .controls {
 	font-size: 12px ;
     text-align: left ;
 	}

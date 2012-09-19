@@ -1,0 +1,10 @@
+%section#create_article
+  = form_for @article do |form|
+    %p
+      = form.label :title, :id => "label"
+      = form.text_field :title, :size => "90"
+    %p  
+      = form.label :content
+      = form.text_area :content, :cols => "80", :rows => "30"     
+    %p
+      = form.submit

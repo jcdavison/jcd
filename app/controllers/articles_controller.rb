@@ -1,4 +1,6 @@
 class ArticlesController < ApplicationController
+
+    before_filter :check_blog_owner_status, :only => [:new,:create,:edit,:update,:destroy]
     
     def index
         @article= Article.all
@@ -15,7 +17,6 @@ class ArticlesController < ApplicationController
     def create
         @article = Article.new(params[:article])
         @article.user_id = current_user.id
-        audit current_user.id
         @article.save
         redirect_to articles_path
     end
@@ -35,4 +36,11 @@ class ArticlesController < ApplicationController
         @article.destroy
         redirect_to articles_path
     end   
+
+    def check_blog_owner_status
+        unless  user_signed_in? && current_user.email == "johncdavison@gmail.com"
+        redirect_to articles_path
+        end
+    end
+
 end

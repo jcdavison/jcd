@@ -4,6 +4,7 @@
       =@article.title
     %p.date
       =@article.created_at.to_date
+      - if check_blog_owner_status == true 
+        = render 'layouts/blog_controls', :article => @article 
     %p.content
-      = split_text(@article.content).join.html_safe
-
+      = return_article_content(@article.content).html_safe

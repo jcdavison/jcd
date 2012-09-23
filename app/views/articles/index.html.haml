@@ -1,12 +1,10 @@
 = render 'layouts/blog_nav'
-- if check_blog_editor_status == true 
-  = render 'layouts/admin_nav'
 %section#blog_content
   %section.article
     - @article.each do |article|
       %ul
         %li.title #{ link_to article.title, article_path(article.id)} 
         %li.date created: #{article.created_at.to_date}
-        - if check_blog_editor_status == true 
+        - if check_blog_owner_status == true 
           = render 'layouts/blog_controls', :article => article  
       %br

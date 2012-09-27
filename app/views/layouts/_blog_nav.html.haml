@@ -1,6 +1,6 @@
-%section#blog_nav
-  %section #{image_tag("jdavison.jpg", :id => "blog_pic")}
-  %section.blog_container
+%section#nav_container
+  #{image_tag("jdavison.jpg", :id => "blog_pic")}
+  %section#nav_list
     %ul
       %li #{link_to("All Articles", articles_path)}
       %li #{link_to("Home", root_path)}

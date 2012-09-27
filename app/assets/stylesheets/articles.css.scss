@@ -1,29 +1,66 @@
-#blog_nav {
-	position:fixed;
+#nav_container {
+	position:fixed ;
+	top: 10px ;
+	left: 10px ;
+	padding: 10px ;
+	margin: 10px ;
+}
 
+#article_container {
+	position: absolute ;
+	margin: 5 px ;
+	padding: 5px ;
+	left: 215px ;
+	top: 50px ;
+}
+
+#article_content{
+	position: relative ;
+	width: 700px ;
+	@include border-radius(10px) ;
+	background-color: $section_bg_color ;	
+	opacity: .70 ; 
+	@include box-shadow(0 0 5px 3px $blue_color) ;
+	padding: 5px ;
+	margin: 10px ;
+	overflow: auto ;
+}
+
+#article_footer {
+	position: relative ;
+	padding: 5px ;
+	margin: 10px ;
+}
+
+.article_footer {
+	color: $blue_color ;
+	font-size: 22px ;
+	font-weight: bold ;
+  text-align: center ;
 }
 
 #blog_pic {
-	position: fixed; 
+	position: relative; 
 	@include border-radius(5px) ;
-	@include box-shadow(0 0 5px 3px $grey_color);
-    height: 125px ;
-    width: 125px ;
-    left: 55px ;
-    top: 15px;
-
+	@include box-shadow(0 0 5px 3px $grey_color) ;
+  height: 125px ;
+  width: 125px ;
+  margin-left: auto;
+	margin-right: auto;
+	display: block;
 }
 
-.blog_container {
-	position: absolute ;
-    @include border-radius(10px) ;
-    @include box-shadow(0 0 5px 3px $grey_color);
+#nav_list {
+	position: relative ;
+  @include border-radius(10px) ;
+  @include box-shadow(0 0 5px 3px $grey_color) ;
 	background-color: $section_bg_color ;	
 	opacity: .70 ; 
 	width: 150px ;
-	padding: 5px;
-	top: 175px;
-	left: 30px ;
+	
+	margin: 2px ;
+	margin-left: auto;
+	margin-right: auto;
 
 	ul {
 	list-style-type: none ;
@@ -32,59 +69,40 @@
 	li { 
 	padding: 5px ;
 	font-size: 20px ;
-	text-align: center;
+	text-align: center ;
 	}
-
-
-    }
-
-#blog_content{
-	position: absolute ;
-	top: 50px ;
-	left: 250px ;
-	width: 700px ;
-	@include border-radius(10px) ;
-	background-color: $section_bg_color ;	
-	opacity: .70 ; 
-	@include box-shadow(0 0 5px 3px $blue_color);
-	padding: 5px ;
-	margin: 10px ;
-	overflow: auto ;
-}
+ }
 
 .article {
 	ul, li {
-	list-style-type: none;
-	display: inline;
+	list-style-type: none ;
+	display: inline ;
 
 	}
 	color: #636263 ;
 	.title {
 	font-size: 22px ;
 	font-weight: bold ;
-    text-align: left ;
+  text-align: left ;
 
 	}
 
 	.date, .controls {
-	font-size: 12px ;
-    text-align: left ;
+		font-size: 12px ;
+  	text-align: left ;
 	}
 
 	.content.footer {
-	font-size: 16px ;
+		font-size: 32px ;
     text-align: left ;
     padding: 10px ;
 	}
-
 }
 
 #create_article {
-	overflow: visible;
+	overflow: visible ;
 	position: absolute ;
-	top: 50px;
-	left: 250px;
-	text-align: center;
-
+	top: 50px ;
+	left: 250px ;
+	text-align: center ;
 }
-	

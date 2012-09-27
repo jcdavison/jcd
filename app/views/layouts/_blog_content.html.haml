@@ -1,10 +1,13 @@
-%section#blog_content
-  %section.article
-    %p.title
-      =@article.title
-    %p.date
-      =@article.created_at.to_date
-      - if check_blog_owner_status == true 
-        = render 'layouts/blog_controls', :article => @article 
-    %p.content
-      = return_article_content(@article.content).html_safe
+%section#article_container
+  %section#article_content
+    %section.article
+      %p.title
+        =@article.title
+      %p.date
+        =@article.created_at.to_date
+        - if check_blog_owner_status == true 
+          = render 'layouts/blog_controls', :article => @article 
+      %p.content
+        = return_article_content(@article.content).html_safe
+  %section#article_footer
+    = render 'layouts/article_footer'

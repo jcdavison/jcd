@@ -1,3 +1,5 @@
+$section_bg_color: rgba(245, 245, 245, 0.45) ;
+
 #nav_container {
 	position:fixed ;
 	top: 10px ;
@@ -19,7 +21,6 @@
 	width: 650px ;
 	@include border-radius(10px) ;
 	background-color: $section_bg_color ;	
-	opacity: .70 ; 
 	@include box-shadow(0 0 5px 3px $blue_color) ;
 	padding: 5px ;
 	margin: 10px ;
@@ -55,7 +56,6 @@
   @include border-radius(10px) ;
   @include box-shadow(0 0 5px 3px $grey_color) ;
 	background-color: $section_bg_color ;	
-	opacity: .70 ; 
 	width: 150px ;
 	
 	margin: 2px ;

@@ -15,7 +15,7 @@ img#jcdavison {
     @include border-radius(10px) ;
     @include box-shadow(0 0 5px 3px $blue_color);
     margin: 15px;
-    width: 360px;
+    width: 380px;
     top: 40px;
     left: 390px;
     overflow: auto;
@@ -34,7 +34,7 @@ ul {
 
 #footer {
 	position: fixed;
-	top: 458px;
+	top: 465px;
 	left: 145px;
 	height: 50px;
 	background-color:$section_bg_color;

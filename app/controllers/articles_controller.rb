@@ -3,7 +3,7 @@ class ArticlesController < ApplicationController
     before_filter :check_blog_owner_status, :only => [:new,:create,:edit,:update,:destroy]
     
     def index
-        @article= Article.all
+        @article= Article.order("created_at DESC")
     end
 
     def show

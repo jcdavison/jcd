@@ -12,12 +12,19 @@ class ArticlesController < ApplicationController
     
     def new
         @article = Article.new
+        @article.tags.build
     end
     
     def create
+        @tag = Tag.new
+        audit @tag
+        audit params
         @article = Article.new(params[:article])
         @article.user_id = current_user.id
         @article.save
+        @tag.clean_tags(params[:tag]).each do |tag|
+            @article.tags << Tag.find_or_create_by_title(tag)
+        end
         redirect_to articles_path
     end
     

@@ -5,6 +5,10 @@
       = form.text_field :title, :size => "90"
     %p  
       = form.label :content
-      = form.text_area :content, :cols => "80", :rows => "30"     
+      = form.text_area :content, :cols => "80", :rows => "30"
+    %p
+      = form.fields_for :tags do |tags|
+        = tags.label :tag
+        = tags.text_field :title, :size => "40", :name => "tag"
     %p
       = form.submit

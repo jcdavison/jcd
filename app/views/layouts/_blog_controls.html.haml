@@ -1,2 +1,3 @@
-%li.controls #{ link_to "edit", edit_article_path(article.id)} 
-%li.controls #{ link_to "delete", article_path(article.id), :method => "DELETE"}
+%ul
+  %li.controls #{ link_to "edit", edit_article_path(article.id)} 
+  %li.controls #{ link_to "delete", article_path(article.id), :method => "DELETE"}

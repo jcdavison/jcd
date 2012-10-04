@@ -3,11 +3,15 @@
     %section.article
       %p.title
         =@article.title
-      %p.date
+      %span.details
         =@article.created_at.to_date
+        - if @article.tags.present? == true
+          \:: tags ::
+          -@article.tags.each do |tag|
+            #{tag.title} ::
         - if check_blog_owner_status == true 
           = render 'layouts/blog_controls', :article => @article 
-      %p.content
+      %span.content
         = return_article_content(@article.content).html_safe
   %section#article_footer
     = render 'layouts/article_footer'

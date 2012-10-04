@@ -11,7 +11,7 @@
             #{tag.title} ::
         - if check_blog_owner_status == true 
           = render 'layouts/blog_controls', :article => @article 
-      %span.content
+      %p.content
         = return_article_content(@article.content).html_safe
   %section#article_footer
     = render 'layouts/article_footer'

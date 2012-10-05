@@ -26,7 +26,7 @@ class ArticlesController < ApplicationController
         @tag.clean_tags(params[:tag]).each do |tag|
             @article.tags << Tag.find_or_create_by_title(tag)
         end
-        redirect_to articles_path
+        redirect_to article_path(@article)
     end
     
     def edit

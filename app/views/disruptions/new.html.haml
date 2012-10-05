@@ -1,0 +1,20 @@
+= render 'layouts/blog_nav'
+%section#disruption_container  
+  %section#create_disruption
+    %section.survey
+      %p.title
+        I'm doing some informal strategy research.
+        %br Briefly and in your own words...
+      = form_for @disruption do |f|
+        %p
+          Please define 'Sustainable Competition'
+          = f.text_area :sustainable, :cols => "75", :rows => "12"
+        %p
+          Please define 'Disruptive Competition'
+          = f.text_area :disruptive, :cols => "75", :rows => "12"
+        %p
+          Your Name, Email, or Twitter (will not be shared or published)
+        %p
+          = f.text_field :name
+          %br
+          = f.submit :Submit!

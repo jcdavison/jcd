@@ -62,6 +62,7 @@ GEM
       multi_json (~> 1.0)
     fabrication (2.2.3)
     ffi (1.1.5)
+    google-analytics-rails (0.0.3)
     haml (3.1.7)
     hike (1.2.1)
     i18n (0.6.0)
@@ -163,6 +164,7 @@ DEPENDENCIES
   coffee-rails (~> 3.2.1)
   devise (~> 2.1.2)
   fabrication (~> 2.2.0)
+  google-analytics-rails
   haml (~> 3.1.7)
   jquery-rails
   launchy (~> 2.1.2)

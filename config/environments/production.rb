@@ -1,6 +1,7 @@
 Jcd::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb
-
+  #google analytics gem info
+  GA.tracker = "UA-25072232-1"
   # Code is not reloaded between requests
   config.cache_classes = true
 

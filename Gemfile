@@ -8,6 +8,7 @@ gem "quiet_assets", "~> 1.0.1"
 gem "haml", "~> 3.1.7"
 gem 'bourbon'
 gem "coderay", "~> 1.0.7"
+gem 'google-analytics-rails'
 
 
 group :test, :development do

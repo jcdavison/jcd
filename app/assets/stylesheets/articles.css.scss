@@ -14,7 +14,7 @@
 	margin: 1em auto;
 }
 #nav li {
-	font-size: 18px;
+	font-size: 16px;
 	text-align: center;
 }
 
@@ -25,7 +25,7 @@ ul .article, .article li {
 }
 
 .title{
-	font-size: 18px;
+	font-size: 20px;
 }
 
 .date{
@@ -42,4 +42,13 @@ ul .article, .article li {
 
 .margin{
 	margin: 2em auto;
+}
+
+.controls {
+	display: inline;
+	list-style-type: none;
+}
+
+.details{
+	font-size: 14px;
 }

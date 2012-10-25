@@ -4,11 +4,8 @@ Jcd::Application.routes.draw do
   resources :abbs
   resources :articles
   
-  match '/disruptive_innovation_survey' => "disruptions#new"
-  match '/thanks' => "disruptions#thanks"
-  match '/disruptions' => 'disruptions#create', :via => [:post]
   #resources :disruptions
-  root :to => 'abbs#index'
+  root :to => 'articles#index'
   
 
 end

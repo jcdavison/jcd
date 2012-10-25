@@ -1,11 +1,13 @@
-= render 'layouts/blog_nav'
-%section#article_container
-  %section#article_content
-    %section.article
+%section.row
+  %section.two.columns.offset-by-one
+    .centered
+      = image_tag "jdavison.jpg", :class => "personal_pic"
+    = render 'layouts/articles_nav'
+  %section.six.columns.end
+    %div.margin
       - @article.each do |article|
-        %ul
+        %ul.article
           %li.title #{ link_to article.title, article_path(article.id)} 
           %li.date created: #{article.created_at.to_date}
           - if check_blog_owner_status == true 
-            = render 'layouts/blog_controls', :article => article
-        %br      
+            = render 'layouts/blog_controls', :article => article      

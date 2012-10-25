@@ -1,0 +1,5 @@
+    %section#main_pic
+      =image_tag("jdavison.jpg", :id => "jcdavison")
+    %section#footer
+    = render 'layouts/info'
+    = render 'layouts/therules'

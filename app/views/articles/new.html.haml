@@ -1,2 +1,8 @@
-= render 'layouts/blog_nav'
-= render 'layouts/new_article'
+%section.row
+  %section.two.columns.offset-by-one
+    .centered
+      = image_tag "jdavison.jpg", :class => "personal_pic"
+    = render 'layouts/articles_nav'
+  %section.six.columns.end
+    .margin
+      = render 'layouts/new_article'

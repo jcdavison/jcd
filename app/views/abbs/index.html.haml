@@ -1,6 +1,10 @@
-%section#main_pic
-  =image_tag("jdavison.jpg", :id => "jcdavison")
-%section#main_display
-  = render 'layouts/therules'
-%section#footer
-  = render 'layouts/footer'
+%section#container.group
+  %section#nav.group
+    =image_tag("jdavison.jpg", :class => "profile_pic")
+    =render 'layouts/info'
+  %section#content.group
+    = render 'layouts/therules'
+  %section#footer.group
+    footer
+
+  

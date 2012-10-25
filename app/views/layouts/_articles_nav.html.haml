@@ -1,0 +1,10 @@
+%ul#nav
+  %li
+    #{link_to("@jcdavison", "http://twitter.com/jcdavison", :target => "new")}
+  %li 
+    #{link_to("All Posts", root_path)}
+  - if check_blog_owner_status == true 
+    %li #{link_to("New Article", new_article_path)}
+    %li #{link_to("Logout", destroy_user_session_path, :method => "DELETE")}
+  - if user_signed_in? && check_blog_owner_status == false 
+    %li #{link_to("Logout", destroy_user_session_path, :method => "DELETE")}

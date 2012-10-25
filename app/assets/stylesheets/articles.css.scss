@@ -1,108 +1,45 @@
-$section_bg_color: rgba(245, 245, 245, 0.45) ;
-
-#nav_container {
-	position:fixed ;
-	top: 10px ;
-	left: 10px ;
-	padding: 10px ;
-	margin: 10px ;
-}
-
-#article_container {
-	position: absolute ;
-	margin: 5 px ;
-	padding: 5px ;
-	left: 200px ;
-	top: 50px ;
-}
-
-#article_content{
-	position: relative ;
-	width: 650px ;
-	@include border-radius(10px) ;
-	background-color: $section_bg_color ;	
-	@include box-shadow(0 0 5px 3px $blue_color) ;
-	padding: 5px ;
-	margin: 10px ;
-	overflow: auto ;
-}
-
-#article_footer {
-	position: relative ;
-	padding: 5px ;
-	margin: 10px ;
-}
-
-.article_footer {
-	color: $blue_color ;
-	font-size: 20px ;
-	font-weight: bold ;
-  text-align: center ;
-}
-
-#blog_pic {
-	position: relative; 
-	@include border-radius(5px) ;
-	@include box-shadow(0 0 5px 3px $grey_color) ;
-  height: 125px ;
-  width: 125px ;
-  margin-left: auto;
-	margin-right: auto;
+.personal_pic {
+	position: relative;
 	display: block;
+	border-radius: 10px;
+	height: 5em;
+	width: 5em;
+	box-shadow: 0 0 .5em black;
+	margin: 1em auto;
 }
 
-#nav_list {
-	position: relative ;
-  @include border-radius(10px) ;
-  @include box-shadow(0 0 5px 3px $grey_color) ;
-	background-color: $section_bg_color ;	
-	width: 150px ;
-	
-	margin: 2px ;
-	margin-left: auto;
-	margin-right: auto;
-
-	ul {
-	list-style-type: none ;
-
-	}
-	li { 
-	padding: 5px ;
-	font-size: 20px ;
-	text-align: center ;
-	}
- }
-
-.article {
-	ul, li {
-	list-style-type: none ;
-	display: inline ;
-
-	}
-	color: #636263 ;
-	.title {
-	font-size: 22px ;
-	font-weight: bold ;
-  text-align: left ;
-
-	}
-
-	.date, .controls, .details {
-		font-size: 12px ;
-  	text-align: left ;
-	}
-
-	.content.footer {
-		font-size: 32px ;
-    text-align: left ;
-    padding: 10px ;
-	}
+#nav {
+	position: block;
+	list-style-type: none;
+	margin: 1em auto;
+}
+#nav li {
+	font-size: 18px;
+	text-align: center;
 }
 
-#create_article {
-	overflow: visible ;
-	position: absolute ;
-	top: 50px ;
-	left: 250px ;
-	text-align: center ;
+ul .article, .article li {
+	display: inline;
+	list-style-type: none;
+
+}
+
+.title{
+	font-size: 18px;
+}
+
+.date{
+	float: right;
+}
+
+.padded{
+	padding: 1em;
+}
+
+.centered{
+	margin: 0 auto;
+}
+
+.margin{
+	margin: 2em auto;
 }

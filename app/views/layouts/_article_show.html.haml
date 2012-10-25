@@ -3,7 +3,7 @@
     %section.article
       .title
         =@article.title
-      .details
+      .details.tags
         =@article.created_at.to_date
         - if @article.tags.present? == true
           \:: tags ::

@@ -2,8 +2,8 @@
 	position: relative;
 	display: block;
 	border-radius: 10px;
-	height: 5em;
-	width: 5em;
+	height: 5.5em;
+	width: 5.5em;
 	box-shadow: 0 0 .5em black;
 	margin: 1em auto;
 }
@@ -21,11 +21,18 @@
 ul .article, .article li {
 	display: inline;
 	list-style-type: none;
-
 }
 
 .title{
-	font-size: 20px;
+	font-size: 22px;
+}
+
+.listing {
+	margin: 1em auto;
+}
+
+.tags {
+	margin: .5em auto;
 }
 
 .date{

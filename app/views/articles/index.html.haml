@@ -6,11 +6,13 @@
   %section.six.columns.end
     %div.margin
       - @article.each do |article|
-        .title #{ link_to article.title, article_path(article.id)} 
-        #{article.created_at.to_date}
-        - if article.tags.empty? == false
-          \:: tags ::
-          - article.tags.each do |tag|
-            #{tag.title} ::
-        - if check_blog_owner_status == true 
-          = render 'layouts/blog_controls', :article => article      
+        .listing
+          .title #{ link_to article.title, article_path(article.id)} 
+          .tags
+            #{article.created_at.to_date}
+            - if article.tags.empty? == false
+              \:: tags ::
+              - article.tags.each do |tag|
+                #{tag.title} ::
+          - if check_blog_owner_status == true 
+            = render 'layouts/blog_controls', :article => article      

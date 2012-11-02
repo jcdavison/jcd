@@ -11,7 +11,7 @@
           .tags
             #{article.created_at.to_date}
             - if article.tags.empty? == false
-              \:: tags ::
+              \   tags ->
               - article.tags.each do |tag|
                 #{tag.title} ::
           - if check_blog_owner_status == true 

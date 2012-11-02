@@ -8,7 +8,7 @@ describe "abbs#index" do
     end
     
     it "should have a link to the blog" do
-       page.should have_content("blog") 
+       page.should have_content("All Posts") 
     end
     
     it "should have have a p#main" do

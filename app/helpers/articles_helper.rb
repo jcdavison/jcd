@@ -36,11 +36,12 @@ module ArticlesHelper
 		process_copy(process_ruby(sift_snippets(blog_post))).join
 	end
 
-		def check_blog_owner_status
-			if user_signed_in? && current_user.email == "johncdavison@gmail.com"
-				true
-			else
-				false
-			end
+	def check_blog_owner_status
+		if user_signed_in? && current_user.email == "johncdavison@gmail.com"
+			true
+		else
+			false
 		end
+	end
+		
 end

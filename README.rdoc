@@ -1,5 +1,0 @@
-rails is a cool tool.  
-
-i'm a beginning rails dev, this is my personal bolt on project.  
-
-its like domo arigato mr roboto, but in ruby.  

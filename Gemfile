@@ -9,7 +9,7 @@ gem "haml", "~> 3.1.7"
 gem 'bourbon'
 gem "coderay", "~> 1.0.7"
 gem 'google-analytics-rails'
-
+gem "guard-spork", "~> 1.4.2"
 
 group :test, :development do
   gem "rspec-rails", "~> 2.0"

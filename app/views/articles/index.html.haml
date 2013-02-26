@@ -5,7 +5,7 @@
     = render 'layouts/articles_nav'
   %section.six.columns.end
     %div.margin
-      - @article.each do |article|
+      - @articles.each do |article|
         .listing
           .title #{ link_to article.title, article_path(article.id)} 
           .tags

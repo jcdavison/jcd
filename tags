@@ -1,0 +1,51 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+AbbsController	app/controllers/abbs_controller.rb	/^class AbbsController < ApplicationController$/;"	c
+AbbsHelper	app/helpers/abbs_helper.rb	/^module AbbsHelper$/;"	m
+ActiveSupport	test/test_helper.rb	/^class ActiveSupport::TestCase$/;"	c
+Application	config/application.rb	/^  class Application < Rails::Application$/;"	c	class:Jcd
+ApplicationController	app/controllers/application_controller.rb	/^class ApplicationController < ActionController::Base$/;"	c
+ApplicationHelper	app/helpers/application_helper.rb	/^module ApplicationHelper$/;"	m
+Article	app/models/article.rb	/^class Article < ActiveRecord::Base$/;"	c
+ArticlesController	app/controllers/articles_controller.rb	/^class ArticlesController < ApplicationController$/;"	c
+ArticlesHelper	app/helpers/articles_helper.rb	/^module ArticlesHelper$/;"	m
+BrowsingTest	test/performance/browsing_test.rb	/^class BrowsingTest < ActionDispatch::PerformanceTest$/;"	c
+Disruption	app/models/disruption.rb	/^class Disruption < ActiveRecord::Base$/;"	c
+DisruptionsController	app/controllers/disruptions_controller.rb	/^class DisruptionsController < ApplicationController$/;"	c
+Jcd	config/application.rb	/^module Jcd$/;"	m
+Kernel	config/initializers/audit_logger.rb	/^module Kernel$/;"	m
+Tag	app/models/tag.rb	/^class Tag < ActiveRecord::Base$/;"	c
+User	app/models/user.rb	/^class User < ActiveRecord::Base$/;"	c
+_kmk	app/assets/javascripts/kiss.js	/^  var _kmk = _kmk || '5b5dc045b3e4173dc32091a1b4325e52c889e9ca';$/;"	v
+_kmq	app/assets/javascripts/kiss.js	/^  var _kmq = _kmq || [];$/;"	v
+_kms	app/assets/javascripts/kiss.js	/^  function _kms(u){$/;"	f
+audit	config/initializers/audit_logger.rb	/^  def audit(message)$/;"	f	class:Kernel
+check_blog_owner_status	app/controllers/articles_controller.rb	/^    def check_blog_owner_status$/;"	f	class:ArticlesController
+check_blog_owner_status	app/helpers/articles_helper.rb	/^	def check_blog_owner_status$/;"	f	class:ArticlesHelper
+clean_tags	app/models/tag.rb	/^  def clean_tags(tags)$/;"	f	class:Tag
+create	app/controllers/articles_controller.rb	/^    def create$/;"	f	class:ArticlesController
+create	app/controllers/disruptions_controller.rb	/^  def create$/;"	f	class:DisruptionsController
+destroy	app/controllers/articles_controller.rb	/^    def destroy$/;"	f	class:ArticlesController
+edit	app/controllers/articles_controller.rb	/^    def edit$/;"	f	class:ArticlesController
+index	app/controllers/abbs_controller.rb	/^  def index$/;"	f	class:AbbsController
+index	app/controllers/articles_controller.rb	/^    def index$/;"	f	class:ArticlesController
+new	app/controllers/articles_controller.rb	/^    def new$/;"	f	class:ArticlesController
+new	app/controllers/disruptions_controller.rb	/^  def new$/;"	f	class:DisruptionsController
+process_copy	app/helpers/articles_helper.rb	/^	def process_copy(ruby_post_process)$/;"	f	class:ArticlesHelper
+process_copy	test2.rb	/^def process_copy(ruby_post_process)$/;"	f
+process_ruby	app/helpers/articles_helper.rb	/^	def process_ruby(ruby_pre_process)$/;"	f	class:ArticlesHelper
+process_ruby	test2.rb	/^def process_ruby(ruby_pre_process)$/;"	f
+return_article_content	app/helpers/articles_helper.rb	/^	def return_article_content(blog_post)$/;"	f	class:ArticlesHelper
+return_article_content	test2.rb	/^def return_article_content(blog_post)$/;"	f
+run_coderay	app/helpers/articles_helper.rb	/^	def run_coderay(content)$/;"	f	class:ArticlesHelper
+run_coderay	test2.rb	/^def run_coderay(content)$/;"	f
+show	app/controllers/articles_controller.rb	/^    def show$/;"	f	class:ArticlesController
+sift_snippets	app/helpers/articles_helper.rb	/^	def sift_snippets(blog_post)$/;"	f	class:ArticlesHelper
+sift_snippets	test2.rb	/^def sift_snippets(blog_post)$/;"	f
+test_homepage	test/performance/browsing_test.rb	/^  def test_homepage$/;"	f	class:BrowsingTest
+thanks	app/controllers/disruptions_controller.rb	/^  def thanks$/;"	f	class:DisruptionsController
+update	app/controllers/articles_controller.rb	/^    def update$/;"	f	class:ArticlesController

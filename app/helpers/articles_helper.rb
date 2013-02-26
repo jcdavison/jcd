@@ -38,9 +38,9 @@ module ArticlesHelper
 
 	def check_blog_owner_status
 		if user_signed_in? && current_user.email == "johncdavison@gmail.com"
-			true
+			return true
 		else
-			false
+			return false
 		end
 	end
 		

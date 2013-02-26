@@ -1,7 +1,7 @@
 class ArticlesController < ApplicationController
 
   respond_to :html, :json
-  before_filter :check_blog_owner_status, :only => [:new,:create,:edit,:update,:destroy]
+  before_filter :check_blog_owner_status, :only => [:new,:create,:edit,:update,:destroy,:remove_tag]
 
   def index
     @articles = Article.order("created_at DESC")
@@ -34,8 +34,12 @@ class ArticlesController < ApplicationController
   end
 
   def update
+    @tag = Tag.new
     @article = Article.find(params[:id])
     @article.update_attributes(params[:article])
+    @tag.clean_tags(params[:tag]).each do |tag|
+      @article.tags << Tag.find_or_create_by_title(tag)
+    end
     redirect_to article_path(@article)
   end
 

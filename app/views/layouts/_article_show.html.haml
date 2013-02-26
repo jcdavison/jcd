@@ -11,8 +11,8 @@
             %li.controls
               \:: tags ::
             = render :partial => 'layouts/tag', :collection => @article.tags
-            - if check_blog_owner_status
-              = render 'layouts/blog_controls', :article => @article 
+          - if check_blog_owner_status
+            = render 'layouts/blog_controls', :article => @article 
       %p.content
         = return_article_content(@article.content).html_safe
   %section#article_footer

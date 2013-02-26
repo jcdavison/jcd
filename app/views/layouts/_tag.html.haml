@@ -1,2 +1,5 @@
 %li.controls{"data-tag-id" => tag.id}
-  #{tag.title} #{link_to "X", "javascript:void()", class: "delete_tag", "data-tag-id" => tag.id} ::
+  #{tag.title}
+  - if check_blog_owner_status
+    #{link_to "X", "javascript:void()", class: "delete_tag", "data-tag-id" => tag.id}
+  \::

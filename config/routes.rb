@@ -4,6 +4,7 @@ Jcd::Application.routes.draw do
   resources :abbs
   resources :articles
   match "remove_tag" => "articles#remove_tag"
+  match "add_tags" => "articles#add_tags"
   #resources :disruptions
   root :to => 'articles#index'
 

@@ -1,0 +1,7 @@
+%ul{ id: "tag_list" }
+  %li.controls
+    =@article.created_at.to_date
+  - if @article.tags.present?
+    %li.controls
+      \:: tags ::
+    = render :partial => 'layouts/tag', :collection => @article.tags

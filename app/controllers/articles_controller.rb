@@ -1,7 +1,7 @@
 class ArticlesController < ApplicationController
 
   respond_to :html, :json
-  before_filter :check_blog_owner_status, :only => [:new,:create,:edit,:update,:destroy,:remove_tag]
+  before_filter :check_blog_owner_status, :only => [:new,:create,:edit,:update,:destroy,:remove_tag, :add_tags]
 
   def index
     @articles = Article.order("created_at DESC")
@@ -63,8 +63,17 @@ class ArticlesController < ApplicationController
     render :json => {
       :tag_id => @tag.id
     }
+  end
 
-
+  def add_tags
+    @article = Article.find(params[:article_id])
+    @tag = Tag.new 
+    @tag.clean_tags(params[:tags]).each do |tag|
+      @article.tags << Tag.find_or_create_by_title(tag)
+    end
+    render :json => {
+      :tags => render_to_string( :partial => "layouts/tags", :locals => { :article => @article } )
+    }
   end
 
 end

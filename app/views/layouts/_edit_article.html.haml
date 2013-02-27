@@ -1,4 +1,10 @@
-%section#create_article
+%section#create_article{ "data-article-id" => @article.id }
+  = render :partial => 'layouts/tags', :locals => { :article => @article }
+  %ul
+    %li.controls
+      = text_field(:new_tag, :title, :cols => "5", :id => :new_tags)
+    %li.controls
+      = link_to "+ Add Tags +", "javascript:void()", :id => :add_tags
   = form_for @article do |form|
     %p
       = form.label :title, :id => "label"

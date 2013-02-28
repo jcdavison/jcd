@@ -6,5 +6,17 @@ class Article < ActiveRecord::Base
   validates_presence_of :content, :title, :user_id
   accepts_nested_attributes_for :tags
 
+  def add_tags(tags)
+    return false if tags == nil
+    tags.split("#").each do |tag|
+      next if tag.empty?
+      tag.downcase!
 
+      if ! Tag.find_by_title(tag)
+        self.tags << Tag.create(title:tag)
+      elsif self.tags.where("title = ?", tag).empty?
+        self.tags << Tag.find_by_title(tag)
+      end
+    end
+  end
 end

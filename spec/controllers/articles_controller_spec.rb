@@ -36,6 +36,33 @@ describe ArticlesController do
     end
   end
 
+  context "#create" do
+    context "admin user" do
+      before do
+        @admin = create(:admin_user)
+      end
+
+      it "creates a new article" do
+        sign_in @admin
+        post( :create, { article: { title: "title", content: "content", user_id: @admin.id } } )
+        assert_redirected_to article_path(assigns(:article))
+      end
+    end
+
+    context "admin user" do
+      before do
+        @user = create(:user)
+      end
+
+      it "creates a new article" do
+        sign_in @user
+        post( :create, { article: { title: "title", content: "content", user_id: @user.id } } )
+        assert_redirected_to articles_path
+      end
+    end
+    
+  end
+
   context "#edit" do
     before do
       @admin = create(:admin_user)
@@ -53,5 +80,18 @@ describe ArticlesController do
       assert_response :success
     end
   end
+
+  #context "#remove_tag" do
+    #before do
+      #@admin = create(:admin_user)
+      #@article = create(:article, user: @admin)
+    #end
+
+    #it "allows admin user to remove tags" do
+      #sign_in @admin
+      #post( :
+
+    #end
+  #end
 
 end

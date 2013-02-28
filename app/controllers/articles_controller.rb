@@ -17,16 +17,15 @@ class ArticlesController < ApplicationController
   end
 
   def create
-    @tag = Tag.new
-    audit @tag
-    audit params
     @article = Article.new(params[:article])
     @article.user_id = current_user.id
-    @article.save
-    @tag.clean_tags(params[:tag]).each do |tag|
-      @article.tags << Tag.find_or_create_by_title(tag)
+    if @article.save
+      @article.add_tags(params[:tag])
+      redirect_to article_path(@article.id)
+    else
+      flash[:alert] = "article not saved"
+      redirect_to :back
     end
-    redirect_to article_path(@article)
   end
 
   def edit
@@ -37,9 +36,6 @@ class ArticlesController < ApplicationController
     @tag = Tag.new
     @article = Article.find(params[:id])
     @article.update_attributes(params[:article])
-    #@tag.clean_tags(params[:tag]).each do |tag|
-      #@article.tags << Tag.find_or_create_by_title(tag)
-    #end
     redirect_to article_path(@article)
   end
 
@@ -67,10 +63,7 @@ class ArticlesController < ApplicationController
 
   def add_tags
     @article = Article.find(params[:article_id])
-    @tag = Tag.new 
-    @tag.clean_tags(params[:tags]).each do |tag|
-      @article.tags << Tag.find_or_create_by_title(tag)
-    end
+    @article.add_tags(params[:tags])
     render :json => {
       :tags => render_to_string( :partial => "layouts/tags", :locals => { :article => @article } )
     }

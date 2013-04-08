@@ -1,5 +1,5 @@
 .row#article_container
-  .small-10.columns.article#article_content{ :data => { :id => @article.id} }
+  .small-12.columns.article#article_content{ :data => { :id => @article.id} }
     .title
       =@article.title
     .details.tags
@@ -13,4 +13,4 @@
         - if check_blog_owner_status
           = render 'layouts/blog_controls', :article => @article
     %p.content
-      = return_article_content(@article.content).html_safe
+      = @article.content.html_safe

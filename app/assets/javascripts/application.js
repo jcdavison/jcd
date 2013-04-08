@@ -14,5 +14,6 @@
 //= require jquery_ujs
 //= require hamlcoffee 
 //= require foundation
+//= require highlight.pack
 //= require_tree .
-
+hljs.initHighlightingOnLoad();

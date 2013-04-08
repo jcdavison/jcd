@@ -12,6 +12,6 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require_tree .
+//= require hamlcoffee 
 //= require foundation
-//= require foundation/app
+//= require_tree .

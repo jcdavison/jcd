@@ -13,4 +13,4 @@
         - if check_blog_owner_status
           = render 'layouts/blog_controls', :article => @article
     %p.content
-      = @article.content.html_safe
+      = return_article_content(@article.content).html_safe

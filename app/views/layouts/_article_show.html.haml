@@ -1,18 +1,16 @@
-%section#article_container
-  %section#article_content
-    %section.article{ "data-article-id" => @article.id }
-      .title
-        =@article.title
-      .details.tags
-        %ul
+.row#article_container
+  .small-10.columns.article#article_content{ :data => { :id => @article.id} }
+    .title
+      =@article.title
+    .details.tags
+      %ul
+        %li.controls
+          =@article.created_at.to_date
+        - if @article.tags.present?
           %li.controls
-            =@article.created_at.to_date
-          - if @article.tags.present?
-            %li.controls
-              \:: tags ::
-            = render :partial => 'layouts/tag', :collection => @article.tags
-          - if check_blog_owner_status
-            = render 'layouts/blog_controls', :article => @article 
-      %p.content
-        = return_article_content(@article.content).html_safe
-  %section#article_footer
+            \:: tags ::
+          = render :partial => 'layouts/tag', :collection => @article.tags
+        - if check_blog_owner_status
+          = render 'layouts/blog_controls', :article => @article
+    %p.content
+      = @article.content.html_safe

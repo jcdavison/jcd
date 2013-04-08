@@ -1,10 +1,10 @@
-%section.row
-  %section.two.columns.offset-by-one
+.row
+  .small-12.large-3.columns
     .centered
       = image_tag "jdavison.jpg", :class => "personal_pic"
     = render 'layouts/articles_nav'
-  %section.six.columns.end
-    %div.margin
+  .small-12.large-9.columns
+    .margin
       - @articles.each do |article|
         .listing
           .title #{ link_to article.title, article_path(article.id)} 

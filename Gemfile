@@ -29,4 +29,5 @@ group :assets do
   gem 'zurb-foundation', '~> 4.0.0'
   gem 'haml_coffee_assets'
   gem 'execjs'
+  gem 'highlight_js-rails'
 end

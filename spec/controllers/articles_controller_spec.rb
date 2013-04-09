@@ -3,8 +3,7 @@ require 'spec_helper'
 describe ArticlesController do
 
   context "non logged in user" do
-
-    context "/index" do
+    context "GET index" do
       it "can see all articles" do
         get :index
         assert_response :success
@@ -12,23 +11,51 @@ describe ArticlesController do
       end
     end
 
-    context "/new" do
+    context "GET new" do
       it "gets redirected to /index" do
         get :new
         response.should redirect_to articles_path 
       end
     end
-  end
 
-  context "#show" do
-    before do
-      @user = create(:admin_user)
-      @article = create(:article, user: @user)
+    context "GET show" do
+      before do
+        @article = create :article
+      end
+      it "can see an individual article" do
+        get :show, :id => @article.id
+        expect(response.code).to eq "200"
+      end
     end
 
-    it "non logged in users can see individual articles" do
-      get(:show, { id: @article.id } )
-      assert_response :success
+    context "GET new" do 
+      it "gets redirected to /index" do
+        get :new
+        response.should redirect_to articles_path 
+      end
+    end
+
+    context "GET edit" do
+      it "gets redirect to /index" do
+        @article = create :article
+        get :edit, :id => @article.id
+        response.should redirect_to articles_path 
+      end
+    end
+
+    context "POST create" do
+      it "gets rejected by server" do
+        post :create, :article => { title: "hello world", content: "amazing", user_id: nil }
+        response.should_not be :success
+      end
+    end
+
+    context "PUT updated" do
+      it "gets rejected by the server" do
+        @article = create :article
+        put :update, :id => @article.id, :article => { title: "new title", content: "new stuff", user_id: nil } 
+        response.should_not be :success
+      end
     end
   end
 

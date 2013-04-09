@@ -2,11 +2,21 @@ require 'spec_helper'
 
 describe ArticlesController do
 
-  context "#index" do
-    it "non logged in users can see all articles" do
-      get :index
-      assert_response :success
-      assert_not_nil assigns(:articles)
+  context "non logged in user" do
+
+    context "/index" do
+      it "can see all articles" do
+        get :index
+        assert_response :success
+        assert_not_nil assigns(:articles)
+      end
+    end
+
+    context "/new" do
+      it "gets redirected to /index" do
+        get :new
+        response.should redirect_to articles_path 
+      end
     end
   end
 

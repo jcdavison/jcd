@@ -7,7 +7,6 @@ gem 'devise', '~> 2.1.2'
 gem "quiet_assets", "~> 1.0.1"
 gem "haml-rails", "~> 0.4"
 gem 'bourbon'
-gem "coderay", "~> 1.0.7"
 gem 'google-analytics-rails'
 gem 'backbone-on-rails'
 

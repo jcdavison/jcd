@@ -243,7 +243,6 @@ DEPENDENCIES
   backbone-on-rails
   bourbon
   capybara (~> 1.1.2)
-  coderay (~> 1.0.7)
   coffee-rails (~> 3.2.1)
   compass-rails (~> 1.0.3)
   database_cleaner (~> 0.9.1)

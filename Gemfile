@@ -19,6 +19,7 @@ group :test, :development do
   gem "factory_girl_rails", "~> 4.2.1"
   gem "guard-rails", "~> 0.3.4"
   gem "rb-fsevent", "~> 0.9"
+  gem "jasmine-rails"
 end
 
 group :assets do

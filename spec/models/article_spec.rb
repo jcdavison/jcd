@@ -20,7 +20,7 @@ describe Article do
 
        it { @article.should respond_to :add_tags }
 
-       it "creates a new association for each tag" do
+       it "creates a new association for each unique tag" do
          @tags = "#ruby#rails#javascript"
          @article.add_tags(@tags)
          @article.tags.count.should == 3
@@ -46,7 +46,7 @@ describe Article do
          @article.tags.count.should == 1
        end
 
-       it "returns false if tags == nil" do
+       it "returns false if an emptry tags object is added" do
          @tags = nil
          @article.add_tags(@tags).should == false
        end

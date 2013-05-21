@@ -8,7 +8,12 @@ class ArticlesController < ApplicationController
   end
 
   def show
-    @article = Article.find(params[:id])
+    if params[:id]
+      @article = Article.find(params[:id])
+    elsif
+      @article = Article.find_by_title("Dev Bootcamp Mentorship Program")
+    end
+    redirect_to root_path unless @article
   end
 
   def new

@@ -8,13 +8,6 @@ end
 
 spec_location = "spec/javascripts/%s_spec"
 
-guard 'jasmine-headless-webkit' do
-  watch(%r{^app/views/.*\.jst$})
-  watch(%r{^public/javascripts/(.*)\.js$}) { |m| newest_js_file(spec_location % m[1]) }
-  watch(%r{^.*/assets/javascripts/(.*)\.(js|coffee)$}) { |m| newest_js_file(spec_location % m[1]) }
-  watch(%r{^spec/javascripts/(.*)_spec\..*}) { |m| newest_js_file(spec_location % m[1]) }
-end
-
 guard :test do
   watch(%r{^lib/(.+)\.rb$})     { |m| "test/#{m[1]}_test.rb" }
   watch(%r{^test/.+_test\.rb$})
@@ -25,4 +18,11 @@ guard :test do
   watch(%r{^app/controllers/(.+)\.rb$})              { |m| "test/functional/#{m[1]}_test.rb" }
   watch(%r{^app/views/.+\.rb$})                      { "test/integration" }
   watch('app/controllers/application_controller.rb') { ["test/functional", "test/integration"] }
+end
+
+guard :jasmine do
+  watch(%r{spec/javascripts/spec\.(js\.coffee|js|coffee)$}) { 'spec/javascripts' }
+  watch(%r{spec/javascripts/.+_spec\.(js\.coffee|js|coffee)$})
+  watch(%r{spec/javascripts/fixtures/.+$})
+  watch(%r{app/assets/javascripts/(.+?)\.(js\.coffee|js|coffee)(?:\.\w+)*$}) { |m| "spec/javascripts/#{ m[1] }_spec.#{ m[2] }" }
 end

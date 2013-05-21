@@ -18,10 +18,13 @@ group :test, :development do
   gem "factory_girl_rails", "~> 4.2.1"
   gem "guard-rails", "~> 0.3.4"
   gem "rb-fsevent", "~> 0.9"
-  gem "jasmine-rails"
-  gem 'guard-jasmine-headless-webkit'
   gem 'ruby-prof' #something related to gem dependencies re guard
   gem "database_cleaner", "~> 0.9.1"
+  gem "guard-jasmine"
+end
+
+group :development, :test do
+  gem "jasminerice", :git => 'https://github.com/bradphelan/jasminerice.git'
 end
 
 group :tools do

@@ -5,7 +5,7 @@
       = form.text_field :title, :size => "90"
     %p  
       = form.label :content
-      = form.text_area :content, :cols => "80", :rows => "30"
+      = form.text_area :content, :style  => "height: 300px;" 
     %p
       = form.fields_for :tags do |tags|
         = tags.label :tags

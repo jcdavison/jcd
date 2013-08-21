@@ -7,7 +7,7 @@
     .margin
       - @articles.each do |article|
         .listing
-          .title #{ link_to article.title, article_path(article.id)} 
+          .title #{ link_to article.title, article.title} 
           .tags
             #{article.created_at.to_date}
             - if article.tags.empty? == false

@@ -4,7 +4,7 @@ Jcd::Application.routes.draw do
   resources :articles
   match "remove_tag" => "articles#remove_tag"
   match "add_tags" => "articles#add_tags"
-  match "Dev_Bootcamp_Mentorship_Program"  => "articles#show", :title  => "Dev_Bootcamp_Mentorship_Program"
+  match "/:title", to: 'articles#show'
   #resources :disruptions
   root :to => 'articles#index'
 

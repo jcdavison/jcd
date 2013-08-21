@@ -10,8 +10,9 @@ class ArticlesController < ApplicationController
   def show
     if params[:id]
       @article = Article.find(params[:id])
-    elsif
-      @article = Article.find_by_title("Dev Bootcamp Mentorship Program")
+    elsif params[:title]
+      # is this ripe for sql injection attack? 
+      @article = Article.find_by_title(params[:title])
     end
     redirect_to root_path unless @article
   end

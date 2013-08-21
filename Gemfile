@@ -16,16 +16,16 @@ group :test, :development do
   gem "fabrication", "~> 2.2.0"
   gem "launchy", "~> 2.1.2"
   gem "factory_girl_rails", "~> 4.2.1"
-  gem "guard-rails", "~> 0.3.4"
   gem "rb-fsevent", "~> 0.9"
   gem 'ruby-prof' #something related to gem dependencies re guard
   gem "database_cleaner", "~> 0.9.1"
   gem "guard-jasmine"
+  gem 'guard-rails'
 end
 
-group :development, :test do
-  gem "jasminerice", :git => 'https://github.com/bradphelan/jasminerice.git'
-end
+# group :development, :test do
+#   gem "jasminerice", :git => 'https://github.com/bradphelan/jasminerice.git'
+# end
 
 group :tools do
   gem "guard-test"

@@ -14,6 +14,15 @@ describe Article do
       @article.save.should == true
    end
 
+   it "replaces ' ' with '_' in title" do
+     @article.clean_title.match(" ").should be_nil
+   end
+
+   it "calls clean_title before save" do
+     @article.should_receive(:clean_title)
+     @article.save
+   end
+
    context "adds tags to an Article" do
 
      context "#add_tags" do

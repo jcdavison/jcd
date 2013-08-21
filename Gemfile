@@ -23,6 +23,10 @@ group :test, :development do
   gem 'guard-rails'
 end
 
+group :development, :test do
+  gem 'pry'
+  gem 'pry-debugger'
+end
 # group :development, :test do
 #   gem "jasminerice", :git => 'https://github.com/bradphelan/jasminerice.git'
 # end

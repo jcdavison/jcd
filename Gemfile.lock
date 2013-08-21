@@ -1,10 +1,3 @@
-GIT
-  remote: https://github.com/bradphelan/jasminerice.git
-  revision: f404da53bb05d0f0f01976182cbc95e918d4cf70
-  specs:
-    jasminerice (0.1.0)
-      coffee-rails
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -64,6 +57,7 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.3.3)
+    columnize (0.3.6)
     compass (0.12.2)
       chunky_png (~> 1.2)
       fssm (>= 0.2.7)
@@ -71,6 +65,12 @@ GEM
     compass-rails (1.0.3)
       compass (>= 0.12.2, < 0.14)
     database_cleaner (0.9.1)
+    debugger (1.6.1)
+      columnize (>= 0.3.1)
+      debugger-linecache (~> 1.2.0)
+      debugger-ruby_core_source (~> 1.2.3)
+    debugger-linecache (1.2.0)
+    debugger-ruby_core_source (1.2.3)
     devise (2.1.2)
       bcrypt-ruby (~> 3.0)
       orm_adapter (~> 0.1)
@@ -153,6 +153,9 @@ GEM
       coderay (~> 1.0.5)
       method_source (~> 0.8)
       slop (~> 3.4)
+    pry-debugger (0.2.2)
+      debugger (~> 1.3)
+      pry (~> 0.9.10)
     quiet_assets (1.0.1)
       railties (~> 3.1)
     rack (1.4.1)
@@ -244,15 +247,16 @@ DEPENDENCIES
   factory_girl_rails (~> 4.2.1)
   google-analytics-rails
   guard-jasmine
-  guard-rails (~> 0.3.4)
+  guard-rails
   guard-test
   haml-rails (~> 0.4)
   haml_coffee_assets
   highlight_js-rails
-  jasminerice!
   jquery-rails
   launchy (~> 2.1.2)
   pg (~> 0.14.0)
+  pry
+  pry-debugger
   quiet_assets (~> 1.0.1)
   rails (= 3.2.7)
   rb-fsevent (~> 0.9)

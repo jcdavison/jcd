@@ -43,5 +43,9 @@ module ArticlesHelper
 			return false
 		end
 	end
+
+	def display_title(article_title)
+    article_title.gsub("_"," ")
+  end
 		
 end

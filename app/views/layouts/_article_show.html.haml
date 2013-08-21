@@ -1,7 +1,7 @@
 .row#article_container
   .small-12.columns.article#article_content{ :data => { :id => @article.id} }
     %header.title
-      =@article.title
+      = display_title(@article.title)
     .details.tags
       %ul
         %li.controls

@@ -15,12 +15,18 @@ describe Article do
    end
 
    it "replaces ' ' with '_' in title" do
-     @article.clean_title.match(" ").should be_nil
+    @article.clean_title.match(" ").should be_nil
    end
 
    it "calls clean_title before save" do
-     @article.should_receive(:clean_title)
-     @article.save
+    @article.should_receive(:clean_title)
+    @article.save
+   end
+
+   it "does not allow duplicate titles" do
+    @new_article = build(:article)
+    @new_article.clean_title
+    @new_article.save.should be_false
    end
 
    context "adds tags to an Article" do

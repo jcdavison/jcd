@@ -4,6 +4,7 @@ class Article < ActiveRecord::Base
   belongs_to :user
   has_and_belongs_to_many :tags
   validates_presence_of :content, :title, :user_id
+  validates_uniqueness_of :title
   accepts_nested_attributes_for :tags
   before_save :clean_title
 

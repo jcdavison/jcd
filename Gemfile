@@ -9,7 +9,7 @@ gem "haml-rails", "~> 0.4"
 gem 'bourbon'
 gem 'google-analytics-rails'
 gem 'backbone-on-rails'
-
+gem 'httparty'
 group :test, :development do
   gem "rspec-rails", "~> 2.0"
   gem 'capybara', '~>1.1.2'

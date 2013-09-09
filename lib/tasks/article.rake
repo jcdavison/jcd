@@ -4,4 +4,8 @@ namespace  :article do
     Article.all.each { |a| a.save }
   end
 
+  task :work  => :environment do
+    HTTParty.get("http://www.johncdavison.com")
+  end
+
 end

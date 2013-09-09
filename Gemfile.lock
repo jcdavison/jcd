@@ -126,6 +126,9 @@ GEM
     highlight_js-rails (7.1.0)
       rails (>= 3.1.1)
     hike (1.2.1)
+    httparty (0.11.0)
+      multi_json (~> 1.0)
+      multi_xml (>= 0.5.2)
     i18n (0.6.0)
     journey (1.0.4)
     jquery-rails (2.1.1)
@@ -145,6 +148,7 @@ GEM
     method_source (0.8.1)
     mime-types (1.19)
     multi_json (1.3.6)
+    multi_xml (0.5.5)
     nokogiri (1.5.5)
     orm_adapter (0.4.0)
     pg (0.14.0)
@@ -252,6 +256,7 @@ DEPENDENCIES
   haml-rails (~> 0.4)
   haml_coffee_assets
   highlight_js-rails
+  httparty
   jquery-rails
   launchy (~> 2.1.2)
   pg (~> 0.14.0)

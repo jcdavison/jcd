@@ -1,5 +1,0 @@
-describe("someFunk", function(){ 
-    it("returns the funk!", function() {
-    expect(someFunk()).toBe("funk");
-    });        
-});

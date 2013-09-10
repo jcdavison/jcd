@@ -6,6 +6,7 @@ namespace  :article do
 
   task :work  => :environment do
     HTTParty.get("http://www.johncdavison.com")
+    HTTParty.get("http://rubyonrailstutor.herokuapp.com")
   end
 
 end

@@ -13,3 +13,5 @@
 //= require vendor
 //= require_tree .
 hljs.initHighlightingOnLoad();
+
+$(function(){ $(document).foundation(); });

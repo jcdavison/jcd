@@ -1,5 +1,6 @@
 /*
  *= require_self
+ //= require foundation_and_overrides
  */
  
 @import "foundation"; 
@@ -12,6 +13,10 @@ $section_bg_color: rgba(245, 245, 245, 0.32);
 
 
 body {
-	background-color: #DBD9DA;
-	background-image: url(escheresque.png);
+	background-color: white;
+}
+
+.border {
+  border-color: grey;
+  border: 1px solid;
 }

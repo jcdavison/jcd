@@ -23,8 +23,13 @@
   <body>
     <div class="row">
       <div class="small-10 columns small-centered">
-    <%= render "layouts/header" %>
-    <%= yield %>
+        <%= render "layouts/header" %>
+        <% if check_blog_owner_status %>
+          <%= render "layouts/admin_nav"%>
+        <% end %>
+        <%= yield %>
+      </div>
+    </div>
     <%= javascript_include_tag "application" %>
   </body>
 </html>

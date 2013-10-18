@@ -18,7 +18,7 @@
       <title>
         <%= display_title(@article.title)%>  	
       </title>
-      <%= tag "meta", property: "og:image", content: 'assets/profile_small.jpg'  %>
+      <%= tag "meta", property: "og:image", content: 'http://www.johncdavison.com/assets/profile_small.jpg'  %>
       <%= tag "meta", property: "og:title", content: display_title(@article.title)   %>
       <%= tag "meta", property: "og:description", content: display_title(@article.title)   %>
     <% else %>

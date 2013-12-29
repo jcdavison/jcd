@@ -1,12 +1,14 @@
 class Article < ActiveRecord::Base
   
-  attr_accessible :content, :title, :user_id
+  attr_accessible :content, :title, :user_id, :draft
   belongs_to :user
   has_and_belongs_to_many :tags
   validates_presence_of :content, :title, :user_id
   validates_uniqueness_of :title
   accepts_nested_attributes_for :tags
   before_save :clean_title
+
+  default_scope { where("draft IS false") }
 
   def add_tags(tags)
     return false if tags == nil

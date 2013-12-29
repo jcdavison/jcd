@@ -8,7 +8,6 @@ class Article < ActiveRecord::Base
   accepts_nested_attributes_for :tags
   before_save :clean_title
 
-  default_scope { where("draft IS false") }
 
   def add_tags(tags)
     return false if tags == nil
